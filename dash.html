@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Dashboard</title>
+    <link rel="stylesheet" href="dash.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <h1>Inventory Dashboard</h1>
+        </div>
+        <div class="nav-right">
+            <button class="nav-button" onclick="openForm()">Add Item</button>
+            <button class="nav-button">View Orders</button>
+        </div>
+    </nav>
+
+    <!-- Filter -->
+    <div class="filter-container">
+        <input type="text" id="filterInput" placeholder="Filter items..." onkeyup="filterItems()">
+    </div>
+
+    <!-- Form for Adding Items -->
+    <div class="form-popup" id="itemForm">
+        <h2>Add Product</h2>
+        <input type="text" id="productName" placeholder="Product Name" required>
+        <input type="number" id="productPrice" placeholder="Price" required>
+        <input type="text" id="productImage" placeholder="Image URL" required>
+        <button onclick="addProduct()">Submit</button>
+        <button onclick="closeForm()" class="cancel">Cancel</button>
+    </div>
+
+    <!-- Product Display Section -->
+    <div id="productContainer"></div>
+
+    <script src="dash.js"></script>
+</body>
+</html>
