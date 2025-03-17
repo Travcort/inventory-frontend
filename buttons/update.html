@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Form</title>
+    <link rel="stylesheet" href="update.css">
+</head>
+<body>
+    <div class="container">
+        <button id="back-button" onclick="back()">Back</button>
+        <script>
+            function back(){
+                window.location.href="view.html"}
+        </script>
+        <select id="picture-select">
+            <option value="picture">Picture</option>
+        </select>
+
+        <form id="whsh-tfour-form">
+            <h2>Update Item</h2>
+            <input type="text" placeholder="Item:" required>
+            <input type="text" placeholder="Category:" required>
+            <input type="text" placeholder="Description" required>
+            <input type="number" placeholder="Quantity:" required>
+            <input type="number" placeholder="Price:" required>
+         
+            <button type="submit">Update</button>
+        </form>
+
+        <div id="image-preview"></div>
+    </div>
+</body>
+</html>

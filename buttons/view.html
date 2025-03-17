@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketPlace</title>
+    <link rel="stylesheet" href="view.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <button id="openAddItemModalBtn">Add Item</button> <!-- Triggers Add Item Modal -->
+        <button id="viewOrdersBtn" onclick="open()">View Orders</button>
+        <a href="homepage1.html">Back</a>
+        
+     <script>
+                function open(){
+                    window.location.href="orders.html"
+                }
+     </script>
+    
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>MarketPlace</h1>
+        <input type="text" id="searchInput" placeholder="Filter items..." class="search-box">
+
+        <div id="dashboardItems"></div> <!-- Items will be displayed here -->
+    </div>
+
+    <!-- Add Item Modal -->
+    <div id="addItemModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeAddModal">&times;</span>
+            <h2>Add Item</h2>
+            <input type="text" id="itemName" placeholder="Enter Item Name">
+            <input type="number" id="itemPrice" placeholder="Enter Item Price">
+            <input type="file" id="itemImage" accept="image/*">
+            <button id="submitItemBtn">Add Item</button>
+        </div>
+    </div>
+
+    <!-- Edit Item Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeEditModal">&times;</span>
+            <h2>Edit Item</h2>
+            <input type="text" id="editItemName">
+            <input type="number" id="editItemPrice">
+            <input type="file" id="editItemImage" accept="image/*">
+            <button id="saveEditBtn">Save Changes</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="view.js"></script>
+</body>
+</html>

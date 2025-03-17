@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Item Form</title>
+    <link rel="stylesheet" href="delete.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Delete Item Form</h2>
+        <form id="delete-item-form">
+            <label for="item-id">Item ID:</label>
+            <input type="text" id="item-id" name="item-id" required>
+
+            <label for="name">Name:</label>
+            <select id="name" name="name" required>
+                <option value="">Select an item</option>
+                <option value="Teste">Teste</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <label for="delete-checkbox">Delete:</label>
+            <input type="checkbox" id="delete-checkbox" name="delete-checkbox" required>
+
+            <button type="submit">Delete</button>
+            <a href="view.html">Back</a></li>
+                    
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

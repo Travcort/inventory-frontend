@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Overview</title>
+    <link rel="stylesheet" href="items.css">
+</head>
+<body>
+
+    
+    <div class="container">
+        <header>
+            <div class="user-info">
+                <img src="../images/logo.png" alt="Profile Picture">
+                <span>StockFlow</span>
+            </div>
+            <nav>
+                <ul>                                     
+                    <li><a href="#" class="active">Dashboard</a></li>
+                    <li><a href="view.html">MarketPlace</a></li>
+                    <li><a href="#">Suppliers</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="landingpage.html">LOG OUT</a></li>
+                    
+       
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Inventory Overview</h2>
+            <div class="order-stats">
+                <div class="stat-box green">
+                    <span><strong>Total Products</strong></span>
+                    <span>1,200</span>
+                </div>
+                <div class="stat-box purple">
+                    <span><strong>Low Stock</strong></span>
+                    <span>45</span>
+                </div>
+                <div class="stat-box blue">
+                    <span><strong>Orders</strong></span>
+                    <span>320</span>
+                </div>
+                <div class="stat-box blue">
+                    <span><strong>Revenue</strong></span>
+                    <span>$8,450</span>
+                </div>
+            </div>
+
+            <div class="recent-metrics">
+                <h3>Recent Metrics</h3>
+                <div class="scort-value">
+                    <p><span class="change positive"><strong>+5%</strong></span>📊</p>
+                </div>
+            </div>
+
+            <div class="dashboard-cards">
+                <div class="card">
+                    <h2>Perfomance Insights</h2>
+                    <img src="../images/perfomance.png" alt="Icon">
+                    <h3>Best Selling Item</h3>
+                    <p><strong>Product:</strong>XYZ Laptop</p>
+                    <p><strong>Stock Left:</strong>20 units</p>
+                    <h3>Worst Selling Item</h3>
+                    <p><strong>Product:</strong>ABC headphones</p>
+                    <p><strong>Stock Left:</strong>100 units</p>
+                </div>
+                <div class="card">
+                    <h2>Customer Reviews</h2>
+                    <img src="../images/review.png" alt="Icon">
+                    <p>Great quality products! Highly recommend.- ⭐⭐⭐⭐⭐</p>
+                    <p>Had delays in delivery but overall good.- ⭐⭐⭐</p>
+                    <p>Not satisfied with packaging.- ⭐⭐</p>
+                </div>
+                <div class="card">
+                    <h2>Customer Complaints</h2>
+                    <img src="../images/complaints.png" alt="Icon">                   
+                    <div class="pending"><p><strong>Order #5887:</strong>"Received a damaged product!"</p>
+                    <p ><strong>Status   </strong> <div class="pend">Pending</div></p>
+                        <button class="resolve-btn" onclick="resolvecomplaint(this)">Resolve Complaint</button>
+                        <script>
+                            function resolvecomplaint(button){
+                                let status= button.previousElementsSibling.querySelector('.status');
+                                status.innerText="Solved";
+                                status.classList.remove("Pending");
+                                status.classList.add("solved");
+                                button.diabled = true;
+                            }
+                        </script>
+                </div>
+                    <div class="pending"><p><strong>Order #3432:</strong>"Wrong Item delivered!"</p>
+                        <p ><strong>Status   </strong> <div class="solved">Solved</div></p></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
