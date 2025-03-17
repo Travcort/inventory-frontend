@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Monitor - Track</title>
+    <link rel="stylesheet" href="orders.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Order Monitor - Track</h2>
+            <div class="filters">
+                <select id="type-filter">
+                    <option value="">Type</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <input type="text" id="order-filter" placeholder="Orders...">
+                <select id="date-filter">
+                    <option value="">Date</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <a href="view.html">Back</a></li>
+            </div>
+        </header>
+
+      
+
+        <main>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Order</th>
+                        <th>Product</th>
+                        <th>Customer</th>
+                        <th>Payment</th>
+                        <th>Shipping progress</th>
+                        <th>Pickup</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>#588734</td>
+                        <td>HP ZBOOK</td>
+                        <td>Michael Ombati</td>                      
+                        <td>Paid</td>
+                        <td>shipped</td>
+                        <td>picked</td>
+                       
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
