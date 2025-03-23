@@ -8,34 +8,50 @@
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-left">
-            <h1>Inventory Dashboard</h1>
+    <!-- Login Section -->
+    <div id="loginSection" class="login-container">
+        <h2>Login</h2>
+        <div class="login-form">
+            <input type="email" id="loginEmail" placeholder="Email" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+            <p id="loginError" class="error-message"></p>
         </div>
-        <div class="nav-right">
-            <button class="nav-button" onclick="openForm()">Add Item</button>
-            <button class="nav-button">View Orders</button>
-        </div>
-    </nav>
-
-    <!-- Filter -->
-    <div class="filter-container">
-        <input type="text" id="filterInput" placeholder="Filter items..." onkeyup="filterItems()">
     </div>
 
-    <!-- Form for Adding Items -->
-    <div class="form-popup" id="itemForm">
-        <h2>Add Product</h2>
-        <input type="text" id="productName" placeholder="Product Name" required>
-        <input type="number" id="productPrice" placeholder="Price" required>
-        <input type="text" id="productImage" placeholder="Image URL" required>
-        <button onclick="addProduct()">Submit</button>
-        <button onclick="closeForm()" class="cancel">Cancel</button>
-    </div>
+    <!-- Dashboard Section (hidden by default) -->
+    <div id="dashboardSection" style="display: none;">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="nav-left">
+                <h1>Inventory Dashboard</h1>
+            </div>
+            <div class="nav-right">
+                <button class="nav-button" onclick="openForm()">Add Item</button>
+                <button class="nav-button">View Orders</button>
+                <button class="nav-button" onclick="logout()">Logout</button>
+            </div>
+        </nav>
 
-    <!-- Product Display Section -->
-    <div id="productContainer"></div>
+        <!-- Filter -->
+        <div class="filter-container">
+            <input type="text" id="filterInput" placeholder="Filter items..." onkeyup="filterItems()">
+        </div>
+
+        <!-- Form for Adding Items -->
+        <div class="form-popup" id="itemForm">
+            <h2>Add Product</h2>
+            <input type="text" id="productName" placeholder="Product Name" required>
+            <input type="text" id="productDescription" placeholder="Description" required>
+            <input type="text" id="productImage" placeholder="Image URL" required>
+            <input type="number" id="productStock" placeholder="Stock" required>
+            <button onclick="addProduct()">Submit</button>
+            <button onclick="closeForm()" class="cancel">Cancel</button>
+        </div>
+
+        <!-- Product Display Section -->
+        <div id="productContainer"></div>
+    </div>
 
     <script src="dash.js"></script>
 </body>
