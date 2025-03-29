@@ -30,3 +30,9 @@ Before running the project, ensure you have the following installed:
 - http-server: A simple static file server for the frontend. Install globally with:
   ```bash
   npm install -g http-server
+## To run the project locally
+ - clone the repository:
+   git clone -b chris-test <repo URL e.g https://github.com/Travcort/inventory-frontend.git>
+ - in the frontend directory, run:
+    http-server
+   
