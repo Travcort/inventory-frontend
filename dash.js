@@ -1,3 +1,27 @@
+
+lucide.createIcons();
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll("#menu button");
+    const contents = document.querySelectorAll(".tab-content");
+    const title = document.getElementById("tab-title");
+    
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            const tab = button.getAttribute("data-tab");
+            
+            contents.forEach(content => {
+                content.classList.remove("active");
+                if (content.id === tab) {
+                    content.classList.add("active");
+                }
+            });
+            
+            title.textContent = button.textContent.trim();
+        });
+    });
+});
+
+
 // Check if user is already logged in
 document.addEventListener('DOMContentLoaded', () => {
     const token = localStorage.getItem('token');

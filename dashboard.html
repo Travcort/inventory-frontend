@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="dash.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <script defer src="script.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="header">
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="images/e.jpg" class="Logo" alt="Eagle Logo">
+            <label class="logo-text">Inventory </label>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+        <a href="auth.html" class="login-btn">Login</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+    </nav>
+</header>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            
+            <nav id="menu">
+                <button data-tab="dashboard"><i data-lucide="home"></i> Dashboard</button>
+                <button data-tab="products"><i data-lucide="package"></i> Products </button>
+                <button data-tab="orders"><i data-lucide="shopping-cart"></i> Orders</button>
+                <button data-tab="logout"><i data-lucide="log-out"></i> Logout</button>
+            </nav>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h1 id="tab-title">Dashboard</h1>
+            </header>
+            <div id="content">
+                <div id="dashboard" class="tab-content active">
+                  <div class="filter-container">
+                    <input type="text" id="filterInput" placeholder="Filter items..." onkeyup="filterItems()">
+                </div>
+                <!-- Product Display Section -->
+                <div id="productContainer"></div>
+                </div>
+
+                <div id="products" class="tab-content">
+                  <button class="nav-button" onclick="openForm()">Add Item</button>
+
+                  <div class="form-popup" id="itemForm">
+                    <h2>Add Product</h2>
+                    <input type="text" id="productName" placeholder="Product Name" required>
+                    <input type="text" id="productDescription" placeholder="Description" required>
+                    <input type="text" id="productImage" placeholder="Image URL" required>
+                    <input type="number" id="productStock" placeholder="Stock" required>
+                    <button onclick="addProduct()">Submit</button>
+                    <button onclick="closeForm()" class="cancel">Cancel</button>
+                </div>
+                </div>
+
+                <div id="orders" class="tab-content">Orders Overview</div>
+                <div id="customers" class="tab-content">Customer Details</div>
+                <div id="settings" class="tab-content">Settings and Configurations</div>
+            </div>
+        </div>
+    </div>
+   <script src="dash.js"></script>
+</body>
+</html>
+

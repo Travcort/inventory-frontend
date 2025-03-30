@@ -1,0 +1,129 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+ 
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: white;
+  position: relative;
+  background-repeat:no-repeat ;
+}
+
+
+/* Background Overlay for Readability */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: -1;
+}
+
+.background-imagee{
+  width: 100%;
+}
+
+.background-image{
+  height: 100vh;
+  width: 100%;
+}
+
+/* Login & Signup Box */
+.login-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  width: 320px;
+  text-align: center;
+  position: absolute;
+}
+
+/* Headings */
+h2 {
+  margin-bottom: 1rem;
+  color: white;
+}
+
+/* Input Fields */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Options (Remember Me + Forgot Password) */
+.options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.options a {
+  color: #00c6ff;
+  text-decoration: none;
+}
+
+.options a:hover {
+  text-decoration: underline;
+}
+
+/* Button */
+.login-btn {
+  background: #0072ff;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 102px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #005bb5;
+}
+
+/* Toggle Form Link */
+.toggle-form {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.toggle-form a {
+  color: #00c6ff;
+  text-decoration: none;
+}
+
+.toggle-form a:hover {
+  text-decoration: underline;
+}
