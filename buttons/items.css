@@ -11,7 +11,8 @@ body {
 .container {
     display: flex;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1600px;
+    margin: 10px;
 }
 
 header {
@@ -94,7 +95,7 @@ main {
 }
 
 .recent-metrics {
-    background-color: grey;
+    background-color: rgb(201, 189, 189);
     color: white;
     padding: 10px;
     border-radius: 5px;
@@ -104,8 +105,8 @@ main {
 }
 .recent-metrics:hover{
     transition: scale(1.05);
-    background-color: #f8f9fa;
-    color: #333;
+    background-color: #8d9092;
+    color: #2e2d2d;
 }
 .positive{
     color: green;
@@ -147,6 +148,7 @@ main {
 
 .card {
     background-color: white;
+    width: 100px;
     padding: 20px;
     border-radius: 5px;
     flex: 1;
@@ -162,7 +164,8 @@ main {
     margin-bottom: 10px;
 }
 .pending{
-    background: #f8d7da;
+    background: #b3b1b1;
+    width: 300px;
     padding: 10px;
     border-radius: 8px;
     margin-top: 10px;

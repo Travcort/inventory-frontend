@@ -11,8 +11,8 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 1200px;
+    width: 100vw;
+    max-width: 1600px;
 }
 
 header {
@@ -38,7 +38,8 @@ main {
 }
 
 table {
-    width: 100%;
+    width: 100vw;
+    max-width: 1500px;
     border-collapse: collapse;
 }
 
