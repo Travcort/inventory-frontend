@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
         // Search functionality
-document.getElementById("searchInput").addEventListener("input", function () {
+   document.getElementById("searchInput").addEventListener("input", function () {
     let searchValue = this.value.toLowerCase(); // Get the search input value
     let items = document.querySelectorAll(".item-card"); // Select all item cards
 
