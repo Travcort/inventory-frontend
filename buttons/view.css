@@ -5,8 +5,9 @@ body {
     margin: 0;
 }
 
-/* Sidebar */
-/* Sidebar Buttons Styling */
+nav{
+    height: 100vh;
+}
 .sidebar button {
     display: block;
     width: 90%;

@@ -3,28 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MarketPlace</title>
+    <title>Inventory</title>
     <link rel="stylesheet" href="view.css">
 </head>
 <body>
 
     <!-- Sidebar -->
-    <div class="sidebar">
+    <nav class="sidebar">
         <button id="openAddItemModalBtn">Add Item</button> <!-- Triggers Add Item Modal -->
-        <button id="viewOrdersBtn" onclick="open()">View Orders</button>
+       
         <a href="homepage1.html">Back</a>
         
-     <script>
-                function open(){
-                    window.location.href="orders.html"
-                }
-     </script>
     
-    </div>
+    </nav>
 
     <!-- Main Content -->
     <div class="main-content">
-        <h1>MarketPlace</h1>
+        <h1>Inventory</h1>
         <input type="text" id="searchInput" placeholder="Filter items..." class="search-box">
 
         <div id="dashboardItems"></div> <!-- Items will be displayed here -->

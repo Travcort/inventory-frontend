@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const storedUser = JSON.parse(localStorage.getItem("user"));
 
         if (storedUser && storedUser.email === email && storedUser.password === password) {
-            alert("Login successful!");
+           
             window.location.href = "homepage1.html"; // Redirect to homepage
         } else {
             alert("Invalid credentials. Please try again.");
